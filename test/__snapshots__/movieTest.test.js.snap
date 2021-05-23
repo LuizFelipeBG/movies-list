@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fliter Movie tests renders correctly component for filter movie 1`] = `
+<View
+  style={Object {}}
+>
+  <Text>
+    Filter
+  </Text>
+</View>
+`;
+
+exports[`renders correctly 1`] = `
+<View
+  style={Object {}}
+>
+  <Text>
+    Filter
+  </Text>
+</View>
+`;
