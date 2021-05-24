@@ -1,0 +1,1 @@
+export const formatInputsValue = (name: string , year?: string | "") => ({filterName: name, filterYear: year })
