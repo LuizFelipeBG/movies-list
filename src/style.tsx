@@ -8,11 +8,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     height: windowHeight,
-    marginTop: StatusBar.currentHeight,
     width: windowWidth,
-    backgroundColor: '#fff',
+    backgroundColor: '#1e1e1e',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
   },
 });
 

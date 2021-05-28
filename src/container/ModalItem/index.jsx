@@ -8,15 +8,16 @@ const ModalItem = ({item, openModal, onClose}) => {
     <View style={styles.centeredView}>
       <Modal
         animationType="slide"
-        transparent={false}
+        transparent={true}
         visible={openModal}
         onRequestClose={() => {
           Alert.alert("Modal has been closed.");
           setModalVisible(!modalVisible);
         }}
       >
-          <View styles={styles.infoContainer}>
-            <View styles={styles.infoMain}>
+      <View>
+          <View style={styles.infoContainer}>
+            <View style={styles.infoMain}>
                 <Image
                     style={styles.tinyLogo}
                     source={item.Poster && {
@@ -36,10 +37,11 @@ const ModalItem = ({item, openModal, onClose}) => {
                 <Button
                     onPress={onClose}
                     title="Ok"
-                    color="#841584"
+                    color="#cbcb1a"
                     style={styles.buttonOk}
                 />
             </View> 
+         </View>
          </View>
       </Modal>
     </View>

@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: windowHeight/6,
     width: windowWidth,
+    justifyContent:'center',
   },
   inputView:{
     flexDirection: 'row',
@@ -18,10 +19,27 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   TextInput: {
-    borderWidth: 0.6,
+    borderWidth: 2,
     borderRadius: 4,
-    borderColor: "#20232a",
-  }
+    paddingHorizontal: 7,
+    color:"#cbcb1a",
+    borderColor: "#cbcb1a",
+    textShadowColor: "#cbcb1a",
+    marginTop: 3,
+    width: windowWidth /2.5
+  },
+  buttonContainer:{
+    justifyContent: 'center'
+  },
+  button: {
+    justifyContent: 'center',
+    backgroundColor: "#cbcb1a",
+    alignItems:'center',
+    height: windowHeight / 20,
+    width: windowWidth / 8,
+    borderRadius: 10
+  },
+  titleView:{}
 });
 
 export default styles

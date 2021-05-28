@@ -1,5 +1,6 @@
 import React from 'react';
 import {Text, View, Image, TouchableOpacity } from 'react-native';
+import styles from '../../filterMovie/style';
 import style from '../style'
 
 const ItemToList = ({item, openModal}:  any ) =>{
@@ -18,7 +19,7 @@ return (
                     }
                     />
                 </View>
-                <View>
+                <View style={styles.titleView}>
                     <Text style={style.title}>{item.Title}</Text>
                 </View>
         </TouchableOpacity>

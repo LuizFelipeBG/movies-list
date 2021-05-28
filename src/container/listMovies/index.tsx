@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { SafeAreaView,ScrollView } from 'react-native';
+import { SafeAreaView,ScrollView, ActivityIndicator } from 'react-native';
 import {getUniqueMovie} from '../client'
 import ItemToList from './itemRender' 
 import ModalItem from '../ModalItem'
 import style from './style'
 
-const listMovies = ({data}: any) => {
+const listMovies = ({data, loading}: any) => {
 
   const [itemModal, setItemModal] = useState({})
   const [open, setOpen] = useState(false)
@@ -18,11 +18,14 @@ const listMovies = ({data}: any) => {
   
     return (
       <SafeAreaView style={style.container}>
+      {!loading ? 
       <ScrollView>
         {data?.map((item: object, index: number) => {
           return <ItemToList item={item} openModal={openModal} key={index}/>
         })}
-      </ScrollView>
+      </ScrollView> : 
+        <ActivityIndicator  size="large" color="#0000ff"/>
+      }
       <ModalItem item={itemModal} openModal={open} onClose={() => setOpen(!open)}/>
     </SafeAreaView>
 )}

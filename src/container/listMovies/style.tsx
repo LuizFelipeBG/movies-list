@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     flex: 8,
     width: windowWidth,
     paddingTop: StatusBar.currentHeight,
-    marginHorizontal: 16
+    marginHorizontal: 16,
   },
   header: {
     fontSize: 32,
@@ -17,7 +17,9 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 15,
-    width: windowWidth / 2
+    width: windowWidth / 2,
+    color:'#1e1e1e',
+    fontWeight: 'bold'
   },
 
   // item css
@@ -27,9 +29,11 @@ const styles = StyleSheet.create({
   },
   
   itemListContainer: {
-    backgroundColor: "#f9c2ff",
+    backgroundColor: "#cbcb1a",
     padding: 20,
     borderRadius: 20,
+    alignItems:'center',
+    justifyContent: 'space-around',
     marginVertical: 8,
     flexDirection: 'row'
   },

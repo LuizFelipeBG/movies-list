@@ -5,12 +5,12 @@ const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
-    centeredView: {
+  centeredView: {
       flex: 1,
       justifyContent: "center",
+      backgroundColor: "#1e1e1e",
       alignItems: "center",
       width: windowWidth,
-      
     },
     modalView: {
       margin: 20,
@@ -48,23 +48,24 @@ const styles = StyleSheet.create({
       textAlign: "center"
     },
     tinyLogo: {
-        width: windowWidth / 1.5,
-        height: windowHeight / 2.5,
-        alignSelf: 'center',
-        marginTop: windowHeight / 45 
-      },
-
+      width: windowWidth / 1.5,
+      height: windowHeight / 2.5,
+      alignSelf: 'center',
+      marginTop: windowHeight / 45,
+      marginBottom: windowHeight / 20
+    },
     infoContainer: {
-        backgroundColor: 'red',
-        flexDirection: 'column',
-        justifyContent: 'space-between'
+      height: '100%',
+      justifyContent: 'space-between',
+      backgroundColor: "#1e1e1e",
     },
     infoItem: {
-        margin:windowWidth / 50,
+      color: "#cbcb1a",
+      margin:windowWidth / 50,
     },
     buttonOk: {
-        width: windowWidth / 1.5
+      width: windowWidth / 1.5
     }
   });
-
-export default styles
+  
+  export default styles
