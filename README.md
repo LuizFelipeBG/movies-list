@@ -2,6 +2,12 @@
 
 Um projeto simples de listar filmes com Filtros.
 
+## Fotos
+
+[<img src="./assets/firstPicture.png" width="200" />]
+[<img src="./assets/secoundPicture.png" width="200" />]
+[<img src="./assets/lastPicture.png" width="200" />]
+
 ## Descrição 
 
 Projeto que possui filtros de nome e ano e retornar os primeiros 10 itens 

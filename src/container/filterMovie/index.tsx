@@ -79,7 +79,7 @@ const FilterMovies = ({search}: any) => {
                     onPress={sendValuesFilter}
                     style={style.button}
                 >
-                    <Text>Filtrar</Text>
+                    <Text style={style.buttonText}>Filtrar</Text>
                 </TouchableOpacity>
             </View>
         </View>

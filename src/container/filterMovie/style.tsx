@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   TextInput: {
-    borderWidth: 2,
+    backgroundColor: "#3b3b3b",
+    borderWidth: 1,
     borderRadius: 4,
     paddingHorizontal: 7,
     color:"#cbcb1a",
@@ -29,17 +30,21 @@ const styles = StyleSheet.create({
     width: windowWidth /2.5
   },
   buttonContainer:{
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   button: {
     justifyContent: 'center',
     backgroundColor: "#cbcb1a",
     alignItems:'center',
-    height: windowHeight / 20,
+    height: windowHeight / 15,
     width: windowWidth / 8,
-    borderRadius: 10
+    borderRadius: 10,
   },
-  titleView:{}
+  titleView:{},
+  buttonText: {
+    fontSize: windowHeight / 55,
+    fontWeight: 'bold'
+  }
 });
 
 export default styles
