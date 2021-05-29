@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dimensions, StyleSheet, StatusBar } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 8,
     width: windowWidth,
-    paddingTop: StatusBar.currentHeight,
     marginHorizontal: 16,
   },
   header: {
@@ -40,6 +39,14 @@ const styles = StyleSheet.create({
   imageView:{
     marginRight: windowWidth / 25
   },
+
+    // pagination ------------
+
+  paginationContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: windowWidth,
+    }
 });
 
 export default styles

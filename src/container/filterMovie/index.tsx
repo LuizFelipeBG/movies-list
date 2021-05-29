@@ -62,7 +62,7 @@ const FilterMovies = ({search}: any) => {
                 }}>
                     Ano: </Text>
                 <TextInput
-                    style={style.TextInput}
+                    style={style.TextYearInput}
                     placeholderTextColor="#cbcb1a"
                     placeholder='Filtrar por ano'
                     onChangeText={setInputYear}

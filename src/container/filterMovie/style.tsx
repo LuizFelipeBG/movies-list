@@ -7,9 +7,8 @@ const windowHeight = Dimensions.get('window').height;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    height: windowHeight/6,
     width: windowWidth,
-    justifyContent:'center',
+    paddingLeft: windowWidth / 20
   },
   inputView:{
     flexDirection: 'row',
@@ -29,6 +28,17 @@ const styles = StyleSheet.create({
     marginTop: 3,
     width: windowWidth /2.5
   },
+  TextYearInput: {
+    backgroundColor: "#3b3b3b",
+    borderWidth: 1,
+    borderRadius: 4,
+    paddingHorizontal: 7,
+    color:"#cbcb1a",
+    borderColor: "#cbcb1a",
+    textShadowColor: "#cbcb1a",
+    marginTop: 3,
+    width: windowWidth /3
+  },
   buttonContainer:{
     justifyContent: 'center',
   },
@@ -44,7 +54,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: windowHeight / 55,
     fontWeight: 'bold'
-  }
+  },
 });
 
 export default styles

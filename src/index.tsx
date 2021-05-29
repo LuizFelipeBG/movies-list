@@ -12,13 +12,23 @@ import styles from './style'
 const Main = () => {
   const [DATA, setDATA] = useState(null)
   const [loading, setLoading] = useState(false)
+  const [dataFilter, setDataFilter] = useState({
+    searchName: "",
+    year: ""
+  })
 
-  const handleSearch= (searchName: string, year?: string) => {
+  const handleSearch= (searchName: string, year?: any) => {
     setLoading(true)
-    const a = getMovies(searchName, year)
+    getMovies(searchName, year)
       .then(i => setDATA(i.Search))
     setLoading(false)
+    setDataFilter({searchName, year})
   }
+  const paginationSearch = (e: number) => {
+    const {searchName, year} = dataFilter
+    getMovies(searchName, year, e)
+      .then(i => setDATA(i.Search))
+  } 
 
    return ( 
    <View style={styles.container}>
@@ -26,17 +36,17 @@ const Main = () => {
         animated={true}
         backgroundColor="#1e1e1e"
         />
-      <Provider store={store}>
+      <View >
         <View style={{flex: 0.1}}>
           <FilterMovie search={handleSearch}/>
         </View>
         <View style={{flex: 0.9, justifyContent: 'center'}}>
           {DATA ? 
-            <ListMovies data={DATA} loading={loading} /> :
+            <ListMovies data={DATA} loading={loading} search={paginationSearch}/> :
             <InitialScreen />
           }
         </View>
-      </Provider>
+      </View>
     </View>)
 }
 
